@@ -3,7 +3,12 @@ body {
     font-family: "Cormorant", serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
 
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
 }
 
 .container {
@@ -12,11 +17,52 @@ body {
 }
 
 .grid {
-   display: grid;
-   grid-template-columns: 1fr 2fr 2fr;
-
+    display: grid;
+    gap: 64px;
 }
 
+.grid-2-colums {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-colums {
+    grid-template-columns: 1fr 2fr 2fr;
+}
+
+.img-responsive {
+    max-width: 95%;
+}
+
+main {
+    background-color: rgb(13, 6, 32);
+    color: #936021;
+}
+
+
+main h2 {
+    color: #777575;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    opacity: 0.4;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+main h3 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+main p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.7;
+}
 header {
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('../images/magic world.jpg');
     background-repeat: no-repeat;
@@ -29,7 +75,7 @@ header {
 
 
 header h1 {
-    color: #b6782c;
+    color: #fbcb9094;
     font-family:  "Berkshire Swash", serif;
     font-style: normal;
     font-weight: 700;
@@ -74,13 +120,9 @@ footer {
     background-image: linear-gradient(rgba(25, 21, 42, 0.9), rgba(25, 21, 42, 0.9)), url('../images/footer-image.png');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0;
 }
 
-section {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 
 footer h3 {
     font-weight: 700;
@@ -93,7 +135,6 @@ footer p {
     font-size: 16px;
     opacity: 0.9;
     line-height: 24px;
-    margin-right: 20px;
 }
 
 footer ul {
@@ -127,4 +168,11 @@ footer a {
         font-size: 14px;
     }
 
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    section {
+        padding: 30px;
+    }
 }
