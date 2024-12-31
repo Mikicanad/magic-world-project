@@ -1,16 +1,83 @@
-h1 {
-    color: #936021;
+body {
+    background-color: #0f0c1a;
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('../images/magic world.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(190, 189, 189);
+    padding: 250px 0;
+
+}
+
+
+header h1 {
+    color: #b6782c;
     font-family:  "Berkshire Swash", serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 60px;
-    line-height: 144px;
+    font-size: 96px;
+    line-height: 1;
+    margin:30px 0;
 }
 
-h2 {
-    font-size: 50px;
-    font-family: "Cormorant", serif;
-    font-optical-sizing: auto;
+header h2 {
+    font-size: 40px;
     font-weight: 400;
-     font-style: normal;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+header h3 {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+header a {
+    color: #936021;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: black;
+    padding: 16px 32px;
+    margin-top: 32px;
+}
+
+@media (max-width: 850px) {
+    header {
+        padding: 60px 0;
+    }
+
+    header h1 {
+        font-size: 46px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    header h3 {
+        font-size: 14px;
+    }
+
 }
