@@ -32,15 +32,15 @@ section.secondry-section {
     gap: 64px;
 }
 
-.grid-2-colums {
+.grid-2-columns {
     grid-template-columns: 1fr 1fr;
 }
 
-.grid-3-colums-for-character {
+.grid-3-columns-for-character {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.grid-3-colums {
+.grid-3-columns {
     grid-template-columns: 1fr 2fr 2fr;
 }
 
@@ -58,8 +58,8 @@ section.secondry-section {
     padding: 30px;
 }
 
-card-header .grid-2-colums {
-    grid-gap: 0;
+card-header .grid-2-columns {
+    gap: 0;
 }
 
 .card-picture {
@@ -67,7 +67,7 @@ card-header .grid-2-colums {
     height: 100%;
     margin: auto;
     margin-right: auto;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .card-footer {
@@ -89,6 +89,10 @@ card-header .grid-2-colums {
 
 .img-responsive {
     width: 100%;
+    display: block;
+}
+
+.movie-embed {
     display: block;
 }
 
@@ -256,7 +260,6 @@ footer a {
         width: 50%;
         margin: auto;
         margin-right: auto;
-        padding-top: 20px;
     }
 
     .card-picture-2 {
