@@ -37,7 +37,9 @@ section.secondry-section {
 }
 
 .grid-3-columns-for-character {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 .grid-3-columns {
@@ -49,6 +51,13 @@ section.secondry-section {
     margin: 30px 0;
 }
 
+.card-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0;
+}
+
 .card h4 {
     font-size: 32px;
     text-align: center;
@@ -58,16 +67,18 @@ section.secondry-section {
     padding: 30px;
 }
 
-card-header .grid-2-columns {
-    gap: 0;
-}
 
 .card-picture {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    margin: auto;
-    margin-right: auto;
-    padding-top: 10px;
+    margin: 0;
+    padding-top: 0;
+}
+
+.card-picture:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease-in-out;
 }
 
 .card-footer {
@@ -92,8 +103,27 @@ card-header .grid-2-columns {
     display: block;
 }
 
+.movie-embed-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin: 20px 30px;
+}
+
 .movie-embed {
-    display: block;
+    position: relative;
+    padding-bottom: 56%; 
+    width: 100%;
+    overflow: hidden;
+}
+
+.movie-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 
@@ -202,8 +232,6 @@ footer {
     background-size: cover;
 }
 
-
-
 footer h3 {
     font-weight: 700;
     font-size: 20px;
@@ -231,6 +259,7 @@ footer a {
     opacity: 0.7;
 }
 
+
 @media (max-width: 960px) {
     header {
         padding: 60px 0;
@@ -248,18 +277,31 @@ footer a {
         font-size: 14px;
     }
 
+    section {
+        padding: 30px;
+    }
     .grid {
         grid-template-columns: 1fr;
         gap: 32px;
     }
-    section {
-        padding: 30px;
-    }
 
+    .grid-3-columns-for-character {
+        grid-template-columns: 1fr; 
+        gap: 18px; 
+        
+    }
+   
     .card-header img {
         width: 50%;
-        margin: auto;
-        margin-right: auto;
+        height: 90%;
+        margin: 0 auto;
+        border-radius: 50%;
+        padding-top: 20px;
+    }
+
+    .card-header img:hover {
+        transform: scale(1.05); 
+        transition: transform 0.3s ease-in-out;
     }
 
     .card-picture-2 {
@@ -268,7 +310,7 @@ footer a {
 
     .card-body {
         text-align: center;
-        margin-top: 30px;
+        padding: 20px;
     }
 
     .card-body h5 {
@@ -276,5 +318,30 @@ footer a {
         line-height: 1;
     }
 
+    .movie-embed-container {
+        grid-template-columns: 1fr 1fr; 
+        width: 100%;
+        height: 100%;
+        margin: 0 16px;
+    }
+
 
 }
+
+@media (max-width: 600px) {
+    .movie-embed-container {
+        grid-template-columns: 1fr; 
+        justify-content: center;
+    }
+
+    .movie-embed iframe {
+        max-width: 90%;
+    }
+
+    .grid-3-columns-for-character {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+
